@@ -1,6 +1,7 @@
 :root {
     --primary-color: #000000;
     --white-color: #FFFFFF;
+    --light-gray-color: #EEEEEE;
     --gap: 3rem;
 }
 
@@ -11,6 +12,11 @@
 
 html {
     font-size: 62.5%;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 body {
@@ -55,11 +61,43 @@ h6 {
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
 }
 
-.section {
+.section-screen {
     min-height: 100vh;
+}
+
+.menu {
+    background-color: var(--white-color);
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid var(--light-gray-color);
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 1rem;
+    border-top: 0.02rem solid var(--white-color);
+}
+
+.menu ul li a:hover{
+    border-top: 0.2rem solid darkorange;
+    transition: all 150ms ease-in-out;
+}
+
+.menu h5 {
+    padding: 0.85rem;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
